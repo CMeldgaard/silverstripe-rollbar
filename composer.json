@@ -1,0 +1,26 @@
+{
+    "name": "cmeldgaard/rollbar",
+    "type": "silverstripe-module",
+    "license": "BSD",
+    "description": "Rollbar integration for SilverStripe. Binds Rollbar to SilverStripe's error & exception handling subsystem.",
+    "keywords": ["silverstripe", "rollbar", "logging", "logs", "log", "exception", "error"],
+    "author": [
+        {
+            "name": "Carsten Meldgaard"
+        }
+    ],
+    "require": {
+        "rollbar/rollbar": "^1.6",
+        "silverstripe/framework": ">=3.1.0,<4"
+    },
+    "require-dev": {
+        "hafriedlander/silverstripe-phockito": "dev-master"
+    },
+    "config": {
+        "process-timeout": 900
+    },
+    "extra": {
+        "installer-name": "silverstripe-rollbar"
+    },
+    "minimum-stability": "dev"
+}

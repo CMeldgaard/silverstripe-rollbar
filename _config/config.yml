@@ -1,0 +1,21 @@
+---
+Name: silverstripe-rollbar
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+
+silverstripe\rollbar\RollbarLogWriter:
+  dependencies:
+    client: %$RollbarClientAdaptor
+
+silverstripe\rollbar\Adaptor\RollbarClient:
+  # Installs all available PHP error handlers
+  # Untested when set to true
+  install: false
+
+Injector:
+  RollbarLogWriter:
+    class: silverstripe\rollbar\RollbarLogWriter
+  RollbarClientAdaptor:
+    class: silverstripe\rollbar\Adaptor\RollbarClient
